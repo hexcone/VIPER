@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="src/viper/util/Jama-1.0.3.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacpp.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv-android-arm.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv-linux-x86_64.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv-linux-x86.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv-windows-x86.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/mysql-connector-java-5.1.25-bin.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/swingx-all-1.6.5.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/thumbnailator-0.4.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
