@@ -163,7 +163,7 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 			});
 			
 			jLabelMenuSteganograph = new JLabel();
-			jLabelMenuSteganograph.setBounds(20, 175, 250, 45);
+			jLabelMenuSteganograph.setBounds(0, 175, 285, 45);
 			jLabelMenuSteganograph.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuSteganograph.setIcon(new ImageIcon(getClass()
 					.getResource("/viper/image/main/menu_steganograph.png")));
@@ -183,7 +183,7 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 			});
 			
 			jLabelMenuWatermark = new JLabel();
-			jLabelMenuWatermark.setBounds(20, 220, 250, 45);
+			jLabelMenuWatermark.setBounds(0, 220, 285, 45);
 			jLabelMenuWatermark.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuWatermark.setIcon(new ImageIcon(getClass().getResource(
 					"/viper/image/main/menu_watermark.png")));
@@ -203,7 +203,7 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 			});
 
 			jLabelMenuFileManagement = new JLabel();
-			jLabelMenuFileManagement.setBounds(20, 265, 250, 45);
+			jLabelMenuFileManagement.setBounds(0, 265, 285, 45);
 			jLabelMenuFileManagement.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuFileManagement.setIcon(new ImageIcon(getClass()
 					.getResource("/viper/image/main/menu_filemanagement.png")));
@@ -223,7 +223,7 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 			});
 
 			jLabelMenuDataProfile = new JLabel();
-			jLabelMenuDataProfile.setBounds(20, 310, 250, 45);
+			jLabelMenuDataProfile.setBounds(0, 310, 285, 45);
 			jLabelMenuDataProfile.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuDataProfile.setIcon(new ImageIcon(getClass().getResource(
 					"/viper/image/main/menu_dataprofile.png")));
@@ -250,7 +250,7 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 			});
 
 			jLabelMenuUserProfile = new JLabel();
-			jLabelMenuUserProfile.setBounds(20, 355, 250, 45);
+			jLabelMenuUserProfile.setBounds(0, 355, 285, 45);
 			jLabelMenuUserProfile.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuUserProfile.setIcon(new ImageIcon(getClass().getResource(
 					"/viper/image/main/menu_userprofile.png")));
@@ -277,7 +277,7 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 			});
 
 			jLabelMenuSettings = new JLabel();
-			jLabelMenuSettings.setBounds(20, 400, 250, 45);
+			jLabelMenuSettings.setBounds(0, 400, 285, 45);
 			jLabelMenuSettings.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuSettings.setIcon(new ImageIcon(getClass().getResource(
 					"/viper/image/main/menu_settings.png")));

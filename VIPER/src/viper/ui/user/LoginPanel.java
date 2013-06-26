@@ -25,6 +25,8 @@ import javax.swing.event.DocumentListener;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.DriverManager;
+import java.util.prefs.BackingStoreException;
 
 public class LoginPanel extends JPanel implements StoredPreferences {
 
@@ -139,6 +141,7 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 		jButtonLogin.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				PREF.put("SSL", "false");
 				if (jLabelUsernameValidator.isVisible()
 						|| jLabelPasswordValidator.isVisible()) {
 
@@ -154,6 +157,17 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 					} else {
 						PREF.put(USERID, user.getUserId());
 						PREF.put(USERNAME, user.getUserName());
+						PREF.put(SSL, String.valueOf(user.isUserSSLSetting()));
+						
+						if (PREF.get("SSL", "false").equals("true")) {
+							JOptionPane.showMessageDialog(frame,
+									"SSL connection is enabled!");
+						}
+						else {
+							JOptionPane.showMessageDialog(frame,
+									"SSL connection is disabled!");
+						}
+						
 						if (user.isUserFaceRegSetting() == true) {
 							JPanel panel = new FaceRecPanel(frame);
 							frame.getContentPane().removeAll();
