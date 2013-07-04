@@ -12,8 +12,10 @@
 	<classpathentry kind="lib" path="src/viper/util/mysql-connector-java-5.1.25-bin.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/swingx-all-1.6.5.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/thumbnailator-0.4.4.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/metadata-extractor-2.6.4-src.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/jaxb-core.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/metadata-extractor-2.6.4.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/javacpp.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/javacv.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/xmpcore.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

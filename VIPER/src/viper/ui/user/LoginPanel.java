@@ -159,14 +159,14 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 						PREF.put(USERNAME, user.getUserName());
 						PREF.put(SSL, String.valueOf(user.isUserSSLSetting()));
 						
-						if (PREF.get("SSL", "false").equals("true")) {
+						/*if (PREF.get("SSL", "false").equals("true")) {
 							JOptionPane.showMessageDialog(frame,
 									"SSL connection is enabled!");
 						}
 						else {
 							JOptionPane.showMessageDialog(frame,
 									"SSL connection is disabled!");
-						}
+						}*/
 						
 						if (user.isUserFaceRegSetting() == true) {
 							JPanel panel = new FaceRecPanel(frame);
