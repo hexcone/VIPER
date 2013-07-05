@@ -7,8 +7,75 @@ public class Entry {
 	String type;
 	String extension;
 	int size;
+
+	// image
+	int res;
 	int height;
 	int width;
+
+	// audio
+	int releaseDate;
+	double duration;
+	String channelType;
+	String artist;
+	int sampleRate;
+	String genre;
+
+	public int getRes() {
+		return res;
+	}
+
+	public void setRes(int res) {
+		this.res = res;
+	}
+
+	public int getReleaseDate() {
+		return releaseDate;
+	}
+
+	public void setReleaseDate(int releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+
+	public double getDuration() {
+		return duration;
+	}
+
+	public void setDuration(double duration) {
+		this.duration = duration;
+	}
+
+	public String getChannelType() {
+		return channelType;
+	}
+
+	public void setChannelType(String channelType) {
+		this.channelType = channelType;
+	}
+
+	public String getArtist() {
+		return artist;
+	}
+
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+
+	public int getSampleRate() {
+		return sampleRate;
+	}
+
+	public void setSampleRate(int sampleRate) {
+		this.sampleRate = sampleRate;
+	}
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
 
 	public String getFullpath() {
 		return fullpath;
