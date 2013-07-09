@@ -14,8 +14,10 @@
 	<classpathentry kind="lib" path="src/viper/util/thumbnailator-0.4.4.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/jaxb-core.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/xmpcore.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/tika-app-1.4.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/jfreechart-1.0.15.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/javacpp.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/javacv.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/tika-app-1.4.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/jcommon-1.0.18.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

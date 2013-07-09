@@ -10,8 +10,9 @@ import java.sql.SQLException;
 import java.util.UUID;
 
 import viper.db.DBController;
+import viper.ui.main.StoredPreferences;
 
-public class User {
+public class User implements StoredPreferences {
 	private User user;
 
 	private String userId;
@@ -21,6 +22,7 @@ public class User {
 	private String userBio;
 	private String userImagePath;
 	private String userFaceRecPath;
+	private String userMetadataPath;
 	private String userEmail;
 	private int userContactNo;
 	private String userCompany;
@@ -97,6 +99,14 @@ public class User {
 
 	public void setUserFaceRecPath(String userFaceRecPath) {
 		this.userFaceRecPath = userFaceRecPath;
+	}
+	
+	public String getUserMetadataPath() {
+		return userMetadataPath;
+	}
+
+	public void setUserMetadataPath(String userMetadataPath) {
+		this.userMetadataPath = userMetadataPath;
 	}
 
 	public String getUserEmail() {
@@ -384,6 +394,7 @@ public class User {
 					user.setUserBio(rs.getString("userBio"));
 					user.setUserImagePath(rs.getString("userImagePath"));
 					user.setUserFaceRecPath(rs.getString("userFaceRecPath"));
+					user.setUserMetadataPath(rs.getString("userMetadataPath"));
 					user.setUserEmail(rs.getString("userEmail"));
 					user.setUserContactNo(rs.getInt("userContactNo"));
 					user.setUserCompany(rs.getString("userCompany"));
@@ -448,4 +459,31 @@ public class User {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void updateUser(String userMetadataPath) {
+		String sql;
+
+		try {
+			con = DBController.getConnection();
+
+			try {
+				sql = "UPDATE user SET " +
+						"`userMetadataPath`=? WHERE `userId`=?;";
+
+				pstmt = con.prepareStatement(sql);
+
+				pstmt.setString(1, userMetadataPath);
+				pstmt.setString(2, PREF.get(USERID, null));
+
+				pstmt.executeUpdate();
+				pstmt.close();
+				con.close();
+			} catch (SQLException s) {
+				s.printStackTrace();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }
