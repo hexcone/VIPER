@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xmlFile>
-    <dateProfiled>2013-07-08T21:19:44.567+08:00</dateProfiled>
+    <dateProfiled>2013-07-11T14:32:48.749+08:00</dateProfiled>
     <entry>
         <duration>0.0</duration>
         <extension>jpeg</extension>
@@ -614,6 +614,1314 @@
         <height>987</height>
         <releaseDate>1</releaseDate>
         <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>270795</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>x-tika-msoffice</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\Thumbs.db</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>22016</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>184042.796875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-化猫.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>7373792</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>273808.28125</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-叫声.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>10964061</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>216045.921875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-喝采.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>8653790</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>289849.03125</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-天華.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11605626</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>236736.921875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-妖語.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>9481357</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>267146.40625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-宵月.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>10697613</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>188039.921875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-朱花艶閃.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>7533663</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>220252.046875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-涙唄.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>8822023</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>146213.796875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-獄門.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>5860778</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>262470.03125</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-空蝉.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>10510576</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>215053.171875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-紅椿.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>8614088</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>227358.046875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-腐海.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>9106230</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>239035.921875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Shukaensen\己龍-鬼祭.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>9573440</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>243555.546875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\01 ETSU TO UTSU.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>9743758</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>280156.65625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\02 hana ichimonme.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11207660</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>236292.796875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\03 hitoribocchi.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>9453277</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>216072.046875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\03 SHIRAGINU NO ONNA.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>8644526</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>243895.171875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\04 ETSU TO UTSU (karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>9757342</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>279843.15625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\05 hana ichimonme (karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11195122</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>234307.296875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\06 hitoribocchi (karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>9373864</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>214008.171875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - Utsu to Etsu\06 SHIRAGINU NO ONNA (karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>8561979</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\01 - Rock N' Roll (Will Take You To The Mountain).flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>37763368</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\02 - Scary Monsters And Nice Sprites.flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>30395861</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\03 - Kill Everybody.flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>39479985</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\04 - All I Ask Of You (feat. Penny).flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>42313018</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\05 - Scatta (feat. Foreign Beggars And Bare Noize).flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>32343818</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\06 - With You, Friends (Long Drive).flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>46455864</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\07 - Scary Monsters And Nice Sprites (Noisia Remix).flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>27981022</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\08 - Scary Monsters And Nice Sprites (Zedd Remix).flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>46553122</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Skrillex</artist>
+        <channelType>Stereo</channelType>
+        <duration>0.0</duration>
+        <extension>x-flac</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Skrillex - Scary Monsters And Nice Sprites\09 - Kill Everybody (Bare Noize Remix).flac</fullpath>
+        <genre>Dubstep</genre>
+        <height>0</height>
+        <releaseDate>2010</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>38676411</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 1 (Winter is Coming)\game of thrones s01e01.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>229488451</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 10 (Fire and Blood)\game of thrones s01e10.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>211104603</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 2 (The Kingsroad)\game of thrones s01e02.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>220876321</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 3 (Lord Snow)\game of thrones s01e03.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>211241907</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 4 (Cripples Bastards and Broken Things)\game of thrones s01e04.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>218463544</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 5 (The Wolf and the Lion)\game of thrones s01e05.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>198086247</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 6 (A Golden Crown)\game of thrones s01e06.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>220423581</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 7 (You Win or You Die)\game of thrones s01e07.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>219208784</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 8 (The Pointy End)\game of thrones s01e08.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>220712216</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>octet-stream</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Game of Thrones Season 1\Game of Thrones Season 1 Episode 9 (Baelor)\game of thrones s01e09.mkv</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>219286842</size>
+        <type>application</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>x-msvideo</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\bird.avi</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>1496576</size>
+        <type>video</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>x-msvideo</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\cbw3.avi</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>837120</size>
+        <type>video</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\centaur_1.mpg</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>563016</size>
+        <type>video</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>x-msvideo</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\drop.avi</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>675840</size>
+        <type>video</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>x-msvideo</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\flame.avi</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>289280</size>
+        <type>video</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\grb_1.mpg</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>1116296</size>
+        <type>video</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\hst_1.mpg</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>761016</size>
+        <type>video</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>x-flv</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\small.flv</fullpath>
+        <height>240</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>303327</size>
+        <type>video</type>
+        <width>320</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>mp4</extension>
+        <fullpath>C:\VIPERMEDIA\Video\Sample Videos\small.mp4</fullpath>
+        <height>320</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>90000</sampleRate>
+        <size>383631</size>
+        <type>video</type>
+        <width>560</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat1.jpeg</fullpath>
+        <height>338</height>
+        <releaseDate>0</releaseDate>
+        <res>240</res>
+        <sampleRate>0</sampleRate>
+        <size>49140</size>
+        <type>image</type>
+        <width>500</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>png</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat11.png</fullpath>
+        <height>329</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>131673</size>
+        <type>image</type>
+        <width>500</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>gif</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat12.gif</fullpath>
+        <height>300</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>38136</size>
+        <type>image</type>
+        <width>400</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat13.jpg</fullpath>
+        <height>472</height>
+        <releaseDate>0</releaseDate>
+        <res>96</res>
+        <sampleRate>0</sampleRate>
+        <size>51087</size>
+        <type>image</type>
+        <width>500</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat2.JPG</fullpath>
+        <height>451</height>
+        <releaseDate>0</releaseDate>
+        <res>96</res>
+        <sampleRate>0</sampleRate>
+        <size>29931</size>
+        <type>image</type>
+        <width>531</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat3.jpg</fullpath>
+        <height>723</height>
+        <releaseDate>0</releaseDate>
+        <res>72</res>
+        <sampleRate>0</sampleRate>
+        <size>195307</size>
+        <type>image</type>
+        <width>1024</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>tiff</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat4.tif</fullpath>
+        <height>781</height>
+        <releaseDate>0</releaseDate>
+        <res>72</res>
+        <sampleRate>0</sampleRate>
+        <size>2365928</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>x-ms-bmp</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat5.bmp</fullpath>
+        <height>781</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>2343056</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>vnd.adobe.photoshop</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat6.psd</fullpath>
+        <height>0</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>1873675</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>png</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat7.png</fullpath>
+        <height>781</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>646638</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>gif</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat8.gif</fullpath>
+        <height>281</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>1030201</size>
+        <type>image</type>
+        <width>500</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Cat\cat9.jpg</fullpath>
+        <height>366</height>
+        <releaseDate>0</releaseDate>
+        <res>1</res>
+        <sampleRate>0</sampleRate>
+        <size>46748</size>
+        <type>image</type>
+        <width>650</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>png</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\250px-Everyone_is_amused_S1E5_cropped.png</fullpath>
+        <height>295</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>74918</size>
+        <type>image</type>
+        <width>250</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\601x450_12265_Daenerys_Targaryen_inspired_speed_painting_video_2d_fan_art_fantasy_girl_woman_portrait_dragon_picture_image_digital_art.jpg</fullpath>
+        <height>450</height>
+        <releaseDate>0</releaseDate>
+        <res>72</res>
+        <sampleRate>0</sampleRate>
+        <size>60430</size>
+        <type>image</type>
+        <width>601</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>png</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\dany-and-dragons-daenerys-targaryen-34441293-1279-688.png</fullpath>
+        <height>688</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>846687</size>
+        <type>image</type>
+        <width>1279</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\dragonattackbysigbjornpedersen-d4sxkxg.jpeg</fullpath>
+        <height>730</height>
+        <releaseDate>0</releaseDate>
+        <res>180</res>
+        <sampleRate>0</sampleRate>
+        <size>148139</size>
+        <type>image</type>
+        <width>1095</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\Dragons-game-of-thrones-dragons-31085614-600-377.jpg</fullpath>
+        <height>377</height>
+        <releaseDate>0</releaseDate>
+        <res>1</res>
+        <sampleRate>0</sampleRate>
+        <size>49387</size>
+        <type>image</type>
+        <width>600</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\fantasy-dragon-dragons-4814431-1280-1024.jpg</fullpath>
+        <height>1024</height>
+        <releaseDate>0</releaseDate>
+        <res>100</res>
+        <sampleRate>0</sampleRate>
+        <size>734103</size>
+        <type>image</type>
+        <width>1280</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\GoT-Dragons-02-jpg_225525.jpg</fullpath>
+        <height>315</height>
+        <releaseDate>0</releaseDate>
+        <res>72</res>
+        <sampleRate>0</sampleRate>
+        <size>26921</size>
+        <type>image</type>
+        <width>630</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>png</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\tumblr_mdfhnatFg21qej3oro1_500.png</fullpath>
+        <height>354</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>398136</size>
+        <type>image</type>
+        <width>500</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>gif</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\tumblr_mkqe67hUqN1r00543o2_250.gif</fullpath>
+        <height>170</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>2039649</size>
+        <type>image</type>
+        <width>245</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>gif</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\tumblr_mkqe67hUqN1r00543o4_r1_250.gif</fullpath>
+        <height>170</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>1815237</size>
+        <type>image</type>
+        <width>245</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>gif</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\tumblr_mkqe67hUqN1r00543o5_r1_250.gif</fullpath>
+        <height>170</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>1772407</size>
+        <type>image</type>
+        <width>245</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>gif</extension>
+        <fullpath>C:\VIPERMEDIA\Dragons\tumblr_mkqe67hUqN1r00543o6_r1_250.gif</fullpath>
+        <height>170</height>
+        <releaseDate>0</releaseDate>
+        <res>0</res>
+        <sampleRate>0</sampleRate>
+        <size>1854361</size>
+        <type>image</type>
+        <width>245</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>294368.65625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\01. 贋作師.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11876015</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>267721.15625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\02. ALICE同罪イノセント.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>10810237</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>304296.15625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\03. 蓮華幽恋.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>12273078</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>296066.78125</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\04. 真偽贋者遊覧会.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11943941</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>292644.40625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\05. La Vérité.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11807064</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>278406.28125</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\06. 野生双生児.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11237586</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>338180.28125</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\07. 逝ける王女の肖像画.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>13628321</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>268504.90625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\08. 真夏の憂愁夫人.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>10841574</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>296928.90625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\09. 天譴と超克.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11978419</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>ALI PROJECT</artist>
+        <channelType>Stereo</channelType>
+        <duration>283108.78125</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\10. RED WALTZ.mp3</fullpath>
+        <genre>Progressive Rock</genre>
+        <height>0</height>
+        <releaseDate>2012</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11425679</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\ALI PROJECT - Gansakushi\gansakushi.jpg</fullpath>
+        <height>604</height>
+        <releaseDate>0</releaseDate>
+        <res>1</res>
+        <sampleRate>0</sampleRate>
+        <size>91130</size>
+        <type>image</type>
+        <width>610</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>183807.671875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\01 aien kien.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>7354077</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>291703.90625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\02 aa.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11669505</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>165676.921875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\03 daruma.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>6628918</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>208208.421875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\03 komoriuta.mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>8330011</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>183807.671875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\04 aien kien (original karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>7354077</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>291703.90625</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\05 aa (original karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>11669505</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>163691.421875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\06 daruma (original karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>6549505</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <artist>Kiryu</artist>
+        <channelType>Stereo</channelType>
+        <duration>206196.796875</duration>
+        <extension>mpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\06 komoriuta (original karaoke).mp3</fullpath>
+        <genre>Visual Kei</genre>
+        <height>0</height>
+        <releaseDate>2013</releaseDate>
+        <res>0</res>
+        <sampleRate>44100</sampleRate>
+        <size>8249554</size>
+        <type>audio</type>
+        <width>0</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\type A.jpg</fullpath>
+        <height>987</height>
+        <releaseDate>0</releaseDate>
+        <res>1</res>
+        <sampleRate>0</sampleRate>
+        <size>215392</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\type B.jpg</fullpath>
+        <height>987</height>
+        <releaseDate>0</releaseDate>
+        <res>1</res>
+        <sampleRate>0</sampleRate>
+        <size>268238</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\type C.jpg</fullpath>
+        <height>987</height>
+        <releaseDate>0</releaseDate>
+        <res>1</res>
+        <sampleRate>0</sampleRate>
+        <size>267069</size>
+        <type>image</type>
+        <width>1000</width>
+    </entry>
+    <entry>
+        <duration>0.0</duration>
+        <extension>jpeg</extension>
+        <fullpath>C:\VIPERMEDIA\Playlist\Kiryu - aien kien\type D.jpg</fullpath>
+        <height>987</height>
+        <releaseDate>0</releaseDate>
+        <res>1</res>
         <sampleRate>0</sampleRate>
         <size>270795</size>
         <type>image</type>

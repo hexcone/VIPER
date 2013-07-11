@@ -94,7 +94,6 @@ public class DataProfilePanel extends JPanel implements StoredPreferences {
 		PromptSupport.setPrompt(
 				"Profile not generated. Click to select a directory.",
 				jTextFieldPath);
-		jTextFieldPath.setText(user.getUserMetadataPath());
 		jTextFieldPath.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -126,6 +125,7 @@ public class DataProfilePanel extends JPanel implements StoredPreferences {
 				JAXBContext jaxbContext = JAXBContext.newInstance(XmlFile.class);
 				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 				xmlfile = (XmlFile) jaxbUnmarshaller.unmarshal(file);
+				jTextFieldPath.setText(xmlfile.getRootDir());
 			} catch (JAXBException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -180,7 +180,6 @@ public class DataProfilePanel extends JPanel implements StoredPreferences {
 					
 				}
 			});
-
 		}
 		
 		jLabelAllFiles = new JLabel();
@@ -286,7 +285,7 @@ public class DataProfilePanel extends JPanel implements StoredPreferences {
 											metadata.names()[j]).split(" ")[0]);
 								}
 								if (metadata.names()[j].toLowerCase().contains(
-										"resolution")) {
+										"x resolution")) {
 									res = Integer.parseInt(metadata.get(
 											metadata.names()[j]).split(" ")[0]);
 								}
@@ -609,30 +608,249 @@ public class DataProfilePanel extends JPanel implements StoredPreferences {
 		        }
 			}
 			else if (quotient == 2) {
-				
+				chartTitle = "Audios by duration";
+	        	
+		        int small = 0;		// sum <= 51200 (50kb)
+		        int medium = 0;		// sum <= 1024000 (1000kb)
+		        int large = 0;		// sum > 1024000
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	int total = (int) audioArray.get(i).getDuration();
+		        	if (total <= 180000) {
+		        		small++;
+		        	}
+		        	else if (total <= 300000) {
+		        		medium++;
+		        	}
+		        	else {
+		        		large++;
+		        	}
+		        }
+		        int sum = small + medium + large;
+		        data.setValue("Short (<3min)", (double) small/sum);
+		        data.setValue("Medium (<5min)", (double) medium/sum);
+		        data.setValue("Long", (double) large/sum);
 			}
 			else if (quotient == 3) {
-				
+				chartTitle = "Audios by channel type";
+	        	
+		        int stereo = 0;
+		        int mono = 0;
+		        int unknown = 0;
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	String type = audioArray.get(i).getChannelType();
+		        	if (type.toLowerCase().equals("stereo")) {
+		        		stereo++;
+		        	}
+		        	else if (type.toLowerCase().equals("mono")) {
+		        		mono++;
+		        	}
+		        	else {
+		        		unknown++;
+		        	}
+		        }
+		        int sum = stereo + mono + unknown;
+		        data.setValue("Stereo", (double) stereo/sum);
+		        data.setValue("Mono", (double) mono/sum);
+		        if (unknown > 0) {
+		        	data.setValue("Unknown", (double) unknown/sum);
+		        }
 			}
 			else if (quotient == 4) {
-				
+				chartTitle = "Audios by artist";
+				ArrayList<String> artistArray = new ArrayList<String>();
+	        	ArrayList<Integer> counterArray = new ArrayList<Integer>();
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	if (!artistArray.contains(audioArray.get(i).getArtist())) {
+		        		artistArray.add(audioArray.get(i).getArtist());
+	        		}
+		        }
+		        
+		        for (int i=0; i< artistArray.size(); i++) {
+		        	counterArray.add(0);
+		        }
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	for (int j = 0; j < artistArray.size(); j++) {
+		        		if (audioArray.get(i).getArtist() == artistArray.get(j)) {
+			        		int count = counterArray.get(j);
+			        		count++;
+			        		counterArray.set(j, count);
+			        	}
+		        	}
+		        }
+		        int sum = 0;
+		        for(int i = 0; i < counterArray.size(); i++){
+		            sum += counterArray.get(i);
+		        }
+		        for(int i = 0; i < counterArray.size(); i++){
+	        		data.setValue(artistArray.get(i).toString(), (double) counterArray.get(i)/sum);
+		        }
 			}
 			else if (quotient == 5) {
-				
+				chartTitle = "Audios by sample rate";
+				ArrayList<Integer> rateArray = new ArrayList<Integer>();
+	        	ArrayList<Integer> counterArray = new ArrayList<Integer>();
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	if (!rateArray.contains(audioArray.get(i).getSampleRate())) {
+		        		rateArray.add(audioArray.get(i).getSampleRate());
+	        		}
+		        }
+		        
+		        for (int i=0; i< rateArray.size(); i++) {
+		        	counterArray.add(0);
+		        }
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	for (int j = 0; j < rateArray.size(); j++) {
+		        		if (audioArray.get(i).getSampleRate() == rateArray.get(j)) {
+			        		int count = counterArray.get(j);
+			        		count++;
+			        		counterArray.set(j, count);
+			        	}
+		        	}
+		        }
+		        int sum = 0;
+		        for(int i = 0; i < counterArray.size(); i++){
+		            sum += counterArray.get(i);
+		        }
+		        for(int i = 0; i < counterArray.size(); i++){
+		        	if (rateArray.get(i) == 0) {
+		        		data.setValue("unknown", (double) counterArray.get(i)/sum);
+		        	}
+		        	else {
+		        		data.setValue(rateArray.get(i)/1000 + " kHz", (double) counterArray.get(i)/sum);
+		        	}
+		        }
 			}
 			else if (quotient == 6) {
-				
+				chartTitle = "Audios by genre";
+				ArrayList<String> artistArray = new ArrayList<String>();
+	        	ArrayList<Integer> counterArray = new ArrayList<Integer>();
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	if (!artistArray.contains(audioArray.get(i).getGenre())) {
+		        		artistArray.add(audioArray.get(i).getGenre());
+	        		}
+		        }
+		        
+		        for (int i=0; i< artistArray.size(); i++) {
+		        	counterArray.add(0);
+		        }
+		        
+		        for (int i=0; i< audioArray.size(); i++) {
+		        	for (int j = 0; j < artistArray.size(); j++) {
+		        		if (audioArray.get(i).getGenre() == artistArray.get(j)) {
+			        		int count = counterArray.get(j);
+			        		count++;
+			        		counterArray.set(j, count);
+			        	}
+		        	}
+		        }
+		        int sum = 0;
+		        for(int i = 0; i < counterArray.size(); i++){
+		            sum += counterArray.get(i);
+		        }
+		        for(int i = 0; i < counterArray.size(); i++){
+	        		data.setValue(artistArray.get(i).toString(), (double) counterArray.get(i)/sum);
+		        }
 			}
 		}
 		else if (category.toLowerCase().contains("video")) {
+			ArrayList<Entry> videoArray = new ArrayList<Entry>();
+	        for (int i=0; i< entryArray.size(); i++) {
+	        	if (entryArray.get(i).getType().equals("video")) {
+	        		videoArray.add(entryArray.get(i));
+	        	}
+	        }
 			if (quotient == 0) {
-				
+				chartTitle = "Videos by file size";
+	        	
+		        int small = 0;		// sum <= 52428800 (50mb)
+		        int medium = 0;		// sum <= 314572800 (300mb)
+		        int large = 0;		// sum > 314572800
+		        
+		        for (int i=0; i< videoArray.size(); i++) {
+		        	int total = videoArray.get(i).getSize();
+		        	
+		        	if (total <= 52428800) {
+		        		small++;
+		        	}
+		        	else if (total <= 314572800) {
+		        		medium++;
+		        	}
+		        	else {
+		        		large++;
+		        	}
+		        }
+		        int sum = small + medium + large;
+		        data.setValue("Small (<50MB)", (double) small/sum);
+		        data.setValue("Medium (<300MB)", (double) medium/sum);
+		        data.setValue("Large", (double) large/sum);
 			}
 			else if (quotient == 1) {
-				
+				chartTitle = "Videos by video size";
+	        	
+		        int icon = 0;		// sum <= 150
+		        int medium = 0;		// sum <= 1500
+		        int large = 0;		// sum > 1500
+		        
+		        for (int i=0; i< videoArray.size(); i++) {
+		        	int total = videoArray.get(i).getHeight() + videoArray.get(i).getWidth();
+		        	if (total <= 150) {
+		        		icon++;
+		        	}
+		        	else if (total <= 1500) {
+		        		medium++;
+		        	}
+		        	else {
+		        		large++;
+		        	}
+		        }
+		        int sum = icon + medium + large;
+		        data.setValue("Icon", (double) icon/sum);
+		        data.setValue("Medium", (double) medium/sum);
+		        data.setValue("Large", (double) large/sum);
 			}
 			else if (quotient == 2) {
-				
+				chartTitle = "Videos by sample rate";
+				ArrayList<Integer> rateArray = new ArrayList<Integer>();
+	        	ArrayList<Integer> counterArray = new ArrayList<Integer>();
+		        
+		        for (int i=0; i< videoArray.size(); i++) {
+		        	if (!rateArray.contains(videoArray.get(i).getSampleRate())) {
+		        		rateArray.add(videoArray.get(i).getSampleRate());
+	        		}
+		        }
+		        
+		        for (int i=0; i< rateArray.size(); i++) {
+		        	counterArray.add(0);
+		        }
+		        
+		        for (int i=0; i< videoArray.size(); i++) {
+		        	for (int j = 0; j < rateArray.size(); j++) {
+		        		if (videoArray.get(i).getSampleRate() == rateArray.get(j)) {
+			        		int count = counterArray.get(j);
+			        		count++;
+			        		counterArray.set(j, count);
+			        	}
+		        	}
+		        }
+		        int sum = 0;
+		        for(int i = 0; i < counterArray.size(); i++){
+		            sum += counterArray.get(i);
+		        }
+		        for(int i = 0; i < counterArray.size(); i++){
+		        	if (rateArray.get(i) == 0) {
+		        		data.setValue("unknown", (double) counterArray.get(i)/sum);
+		        	}
+		        	else {
+		        		data.setValue(rateArray.get(i)/1000 + " kHz", (double) counterArray.get(i)/sum);
+		        	}
+		        }
 			}
 		}
 
