@@ -1,7 +1,6 @@
 package viper.ui.user;
 
 import static com.googlecode.javacv.cpp.opencv_core.cvClearMemStorage;
-import static com.googlecode.javacv.cpp.opencv_highgui.cvSaveImage;
 
 import com.googlecode.javacv.FrameGrabber;
 import com.googlecode.javacv.FrameGrabber.Exception;
@@ -9,7 +8,6 @@ import com.googlecode.javacv.OpenCVFrameGrabber;
 import com.googlecode.javacv.cpp.opencv_core.CvMemStorage;
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 
-import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -29,11 +27,13 @@ import javax.swing.JButton;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 
+import viper.entity.Logger;
+import viper.entity.TrackedPanel;
 import viper.ui.main.HomePanel;
 import viper.ui.main.MenuPanel;
 import viper.ui.main.StoredPreferences;
 
-public class FaceRecPanel extends JPanel implements StoredPreferences {
+public class FaceRecPanel extends TrackedPanel implements StoredPreferences {
 
 	private static JFrame frame = null;
 	private JLabel jLabelBackground;
@@ -56,7 +56,10 @@ public class FaceRecPanel extends JPanel implements StoredPreferences {
 		initialize();
 	}
 
-	private void initialize() {
+	@Override
+	public void initialize() {
+		super.initialize();
+		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(
@@ -113,8 +116,17 @@ public class FaceRecPanel extends JPanel implements StoredPreferences {
 				
 		        OpenCVFaceRecognizer fr = new OpenCVFaceRecognizer(parent.getParent(), file.getAbsolutePath());
 		        if (fr.isMatch()) {
-		        	JOptionPane.showMessageDialog(frame,
+					try {
+						Logger.logUserLogin(PREF.get(USERID, null), true,
+								"FaceRec::"+getIp());
+					} catch (java.lang.Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					JOptionPane.showMessageDialog(frame,
 							"Match successful!");
+					Logger.logUserLogin(PREF.get(USERID, null), true,
+							"FaceRec");
 		        	JPanel panel = new HomePanel(frame);
 					JPanel menu = new MenuPanel(frame);
 					menu.setLocation(700,0);
@@ -125,6 +137,13 @@ public class FaceRecPanel extends JPanel implements StoredPreferences {
 					frame.getContentPane().repaint();
 		        }
 		        else {
+		        	try {
+						Logger.logUserLogin(PREF.get(USERID, null), false,
+								"FaceRec::"+getIp());
+					} catch (java.lang.Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 		        	JOptionPane.showMessageDialog(frame,
 							"Match unsuccessful!");
 		        	JPanel panel = new LoginPanel(frame);

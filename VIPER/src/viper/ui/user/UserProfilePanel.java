@@ -5,11 +5,11 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
+import viper.entity.TrackedPanel;
 import viper.ui.main.StoredPreferences;
 
-public class UserProfilePanel extends JPanel implements StoredPreferences {
+public class UserProfilePanel extends TrackedPanel implements StoredPreferences {
 
 	private static JFrame frame = null;
 	private JLabel jLabelBackground;
@@ -29,7 +29,10 @@ public class UserProfilePanel extends JPanel implements StoredPreferences {
 		initialize();
 	}
 
-	private void initialize() {
+	@Override
+	public void initialize() {
+		super.initialize();
+		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(

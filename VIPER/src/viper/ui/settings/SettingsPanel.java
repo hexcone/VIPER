@@ -1,7 +1,6 @@
 package viper.ui.settings;
 
 import static com.googlecode.javacv.cpp.opencv_core.cvClearMemStorage;
-import static com.googlecode.javacv.cpp.opencv_highgui.cvSaveImage;
 
 import java.awt.Color;
 import java.awt.Cursor;
@@ -31,11 +30,10 @@ import com.googlecode.javacv.FrameGrabber.Exception;
 import com.googlecode.javacv.cpp.opencv_core.CvMemStorage;
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 
+import viper.entity.TrackedPanel;
 import viper.entity.User;
-import viper.ui.main.HomePanel;
 import viper.ui.main.MenuPanel;
 import viper.ui.main.StoredPreferences;
-import viper.ui.user.FaceRecPanel;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -45,7 +43,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class SettingsPanel extends JPanel implements StoredPreferences {
+public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 
 	private static JFrame frame = null;
 	private User user = null;
@@ -97,8 +95,10 @@ public class SettingsPanel extends JPanel implements StoredPreferences {
 		initialize();
 	}
 
-	private void initialize() {
-
+	@Override
+	public void initialize() {
+		super.initialize();
+		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(

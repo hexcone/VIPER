@@ -23,7 +23,6 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -47,12 +46,12 @@ import org.jfree.util.Rotation;
 import org.xml.sax.SAXException;
 
 import viper.entity.Entry;
+import viper.entity.TrackedPanel;
 import viper.entity.User;
 import viper.entity.XmlFile;
 import viper.ui.main.StoredPreferences;
-import viper.ui.user.RegisterPanel;
 
-public class DataProfilePanel extends JPanel implements StoredPreferences {
+public class DataProfilePanel extends TrackedPanel implements StoredPreferences {
 
 	private static JFrame frame = null;
 	private JLabel jLabelBackground;
@@ -81,8 +80,11 @@ public class DataProfilePanel extends JPanel implements StoredPreferences {
 		frame = f;
 		initialize();
 	}
-
-	private void initialize() {
+	
+	@Override
+	public void initialize() {
+		super.initialize();
+		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(
@@ -138,39 +140,43 @@ public class DataProfilePanel extends JPanel implements StoredPreferences {
 			chartPanel.addChartMouseListener(new ChartMouseListener(){
 				@Override
 				public void chartMouseClicked(ChartMouseEvent e) {
-					System.out.println(e.getEntity().getToolTipText());
-					String backupCategory = category;
-					category = e.getEntity().getToolTipText().split(":")[0].toLowerCase();
-					if (Arrays.asList(catArray).contains(category)) {
-						chartPanel.setChart(drawChart(category, 0));
-						loopCount = 0;
-						chartPanel.repaint();
-					}
-					else {
-						category = backupCategory;
-						if (category.equals("image")) {
-							chartPanel.setChart(drawChart(category, loopCount%3));
-							loopCount++;
+					try {
+						System.out.println(e.getEntity().getToolTipText());
+						String backupCategory = category;
+						category = e.getEntity().getToolTipText().split(":")[0].toLowerCase();
+						if (Arrays.asList(catArray).contains(category)) {
+							chartPanel.setChart(drawChart(category, 0));
+							loopCount = 0;
 							chartPanel.repaint();
 						}
-						else if (category.equals("audio")) {
-							chartPanel.setChart(drawChart(category, loopCount%7));
-							loopCount++;
-							chartPanel.repaint();
+						else {
+							category = backupCategory;
+							if (category.equals("image")) {
+								chartPanel.setChart(drawChart(category, loopCount%3));
+								loopCount++;
+								chartPanel.repaint();
+							}
+							else if (category.equals("audio")) {
+								chartPanel.setChart(drawChart(category, loopCount%7));
+								loopCount++;
+								chartPanel.repaint();
+							}
+							else if (category.equals("video")) {
+								chartPanel.setChart(drawChart(category, loopCount%3));
+								loopCount++;
+								chartPanel.repaint();
+							}
 						}
-						else if (category.equals("video")) {
-							chartPanel.setChart(drawChart(category, loopCount%3));
-							loopCount++;
-							chartPanel.repaint();
+						if (category.toLowerCase().equals("main")) {
+							jLabelAllFiles.setVisible(false);
+							jLabelAllFiles.repaint();
 						}
-					}
-					if (category.toLowerCase().equals("main")) {
-						jLabelAllFiles.setVisible(false);
-						jLabelAllFiles.repaint();
-					}
-					else {
-						jLabelAllFiles.setVisible(true);
-						jLabelAllFiles.repaint();
+						else {
+							jLabelAllFiles.setVisible(true);
+							jLabelAllFiles.repaint();
+						}
+					} catch (NullPointerException ex) {
+						
 					}
 				}
 

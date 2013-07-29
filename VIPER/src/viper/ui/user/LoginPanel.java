@@ -14,6 +14,8 @@ import javax.swing.JPasswordField;
 
 import org.jdesktop.swingx.prompt.PromptSupport;
 
+import viper.entity.Logger;
+import viper.entity.TrackedPanel;
 import viper.entity.User;
 import viper.ui.main.HomePanel;
 import viper.ui.main.MenuPanel;
@@ -23,12 +25,14 @@ import javax.swing.JButton;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.sql.DriverManager;
-import java.util.prefs.BackingStoreException;
+import java.util.ArrayList;
+import java.util.Date;
 
-public class LoginPanel extends JPanel implements StoredPreferences {
+public class LoginPanel extends TrackedPanel implements StoredPreferences {
 
 	private static JFrame frame = null;
 	private User user = new User();
@@ -41,7 +45,13 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 	private JButton jButtonLogin;
 	private JLabel jLabelRegister;
 	private JLabel jLabelForgetPassword;
-
+	private ArrayList<Date> usernameArray = new ArrayList<Date>();
+	private ArrayList<Date> passwordArray = new ArrayList<Date>();
+	private int usernameCount = 0;
+	private int passwordCount = 0;
+	private double typeSpeed = 0;
+	private double interval = 0;
+	
 	/**
 	 * Create the panel.
 	 */
@@ -56,8 +66,10 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 		initialize();
 	}
 
-	private void initialize() {
-
+	@Override
+	public void initialize() {
+		super.initialize();
+		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(
@@ -94,6 +106,22 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 		jTextFieldUsername.setBounds(450, 250, 350, 40);
 		jTextFieldUsername.setBackground(Color.white);
 		PromptSupport.setPrompt("Username", jTextFieldUsername);
+		jTextFieldUsername.addKeyListener(new KeyListener() {
+			public void keyPressed(KeyEvent keyEvent) {
+				System.out.println("Pressed: " + keyEvent);
+				usernameArray.add(new Date());
+				usernameCount++;
+			}
+
+			public void keyReleased(KeyEvent keyEvent) {
+				System.out.println("Released: " + keyEvent);
+			}
+
+			public void keyTyped(KeyEvent keyEvent) {
+				System.out.println("Typed: " + keyEvent);
+
+			}
+		});
 
 		jLabelUsernameValidator = new JLabel();
 		jLabelUsernameValidator.setBounds(810, 250, 200, 40);
@@ -127,6 +155,22 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 				});
 		jPasswordField.setBounds(450, 310, 350, 40);
 		PromptSupport.setPrompt("Password", jPasswordField);
+		jTextFieldUsername.addKeyListener(new KeyListener() {
+			public void keyPressed(KeyEvent keyEvent) {
+				System.out.println("Pressed: " + keyEvent);
+				passwordArray.add(new Date());
+				passwordCount++;
+			}
+
+			public void keyReleased(KeyEvent keyEvent) {
+				System.out.println("Released: " + keyEvent);
+			}
+
+			public void keyTyped(KeyEvent keyEvent) {
+				System.out.println("Typed: " + keyEvent);
+
+			}
+		});
 
 		jLabelPasswordValidator = new JLabel();
 		jLabelPasswordValidator.setBounds(810, 310, 200, 40);
@@ -154,19 +198,19 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 					if (user == null) {
 						JOptionPane.showMessageDialog(frame,
 								"Username or password is incorrect!");
+						Logger.logInvalidUsernames(jTextFieldUsername.getText());
 					} else {
 						PREF.put(USERID, user.getUserId());
 						PREF.put(USERNAME, user.getUserName());
 						PREF.put(SSL, String.valueOf(user.isUserSSLSetting()));
 						
-						/*if (PREF.get("SSL", "false").equals("true")) {
-							JOptionPane.showMessageDialog(frame,
-									"SSL connection is enabled!");
-						}
-						else {
-							JOptionPane.showMessageDialog(frame,
-									"SSL connection is disabled!");
-						}*/
+						interval = usernameArray.get(usernameArray.size()-1).getTime() - usernameArray.get(0).getTime();
+						typeSpeed = interval / usernameCount;
+						Logger.logAction(0, "Typing Speed", true, "Username::" + typeSpeed);
+						
+						interval = passwordArray.get(passwordArray.size()-1).getTime() - passwordArray.get(0).getTime();
+						typeSpeed = interval / passwordCount;
+						Logger.logAction(0, "Typing Speed", true, "Password::" + typeSpeed);
 						
 						if (user.isUserFaceRegSetting() == true) {
 							JPanel panel = new FaceRecPanel(frame);
@@ -176,6 +220,13 @@ public class LoginPanel extends JPanel implements StoredPreferences {
 							frame.getContentPane().repaint();
 						}
 						else {
+							try {
+								Logger.logUserLogin(PREF.get(USERID, null), true,
+										"Reg::"+getIp());
+							} catch (Exception e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 							JPanel panel = new HomePanel(frame);
 							JPanel menu = new MenuPanel(frame);
 							menu.setLocation(700,0);

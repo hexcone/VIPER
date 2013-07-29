@@ -1,16 +1,14 @@
 package viper.ui.main;
 
 import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
-public class HomePanel extends JPanel implements StoredPreferences {
+import viper.entity.TrackedPanel;
+
+public class HomePanel extends TrackedPanel implements StoredPreferences {
 
 	private static JFrame frame = null;
 	private JLabel jLabelBackground;
@@ -30,8 +28,10 @@ public class HomePanel extends JPanel implements StoredPreferences {
 		initialize();
 	}
 
-	private void initialize() {
-
+	@Override
+	public void initialize() {
+		super.initialize();
+		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(

@@ -19,19 +19,14 @@ import javax.swing.event.DocumentListener;
 
 import org.jdesktop.swingx.prompt.PromptSupport;
 
+import viper.entity.TrackedPanel;
 import viper.entity.User;
 import viper.ui.main.StoredPreferences;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeEvent;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
 
-public class RegisterPanel extends JPanel implements StoredPreferences {
+public class RegisterPanel extends TrackedPanel implements StoredPreferences {
 
 	private static JFrame frame = null;
 	private User user;
@@ -61,8 +56,10 @@ public class RegisterPanel extends JPanel implements StoredPreferences {
 		initialize();
 	}
 
-	private void initialize() {
-
+	@Override
+	public void initialize() {
+		super.initialize();
+		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(

@@ -8,4 +8,5 @@ public interface StoredPreferences {
 	public static final String USERID = "USERID";
 	public static final String USERNAME = "USERNAME";
 	public static final String SSL = "SSL";
+	public static final String ENTRANCEID = "ENTRANCEID";
 }

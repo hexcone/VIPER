@@ -358,6 +358,7 @@ public class User implements StoredPreferences {
 					user.setUserProfileSetting(rs
 							.getBoolean("userProfileSetting"));
 					user.setUserSuspended(rs.getBoolean("userSuspended"));
+					
 				}
 
 				pstmt.close();

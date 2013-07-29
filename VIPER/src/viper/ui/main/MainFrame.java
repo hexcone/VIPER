@@ -1,18 +1,18 @@
 package viper.ui.main;
 
 import java.awt.Font;
-import java.util.prefs.Preferences;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
+import viper.entity.TrackedPanel;
 import viper.ui.user.LoginPanel;
 
 public class MainFrame extends JFrame implements StoredPreferences {
 
-	private static JPanel contentPane = null;
+	private static TrackedPanel contentPane = null;
 
 	/**
 	 * This is the default constructor
@@ -55,9 +55,9 @@ public class MainFrame extends JFrame implements StoredPreferences {
 	 * 
 	 * @return javax.swing.JPanel
 	 */
-	public JPanel getContentPane() {
+	public TrackedPanel getContentPane() {
 		if (contentPane == null) {
-			contentPane = new JPanel();
+			contentPane = new TrackedPanel();
 			contentPane.setLayout(null);
 		}
 		return contentPane;
