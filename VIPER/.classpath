@@ -2,22 +2,36 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="src/viper/util/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/commons-fileupload-1.3.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/fluent-hc-4.2.5.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/gif4j_pro_trial_2.3.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpasyncclient-4.0-beta4.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpasyncclient-cache-4.0-beta4.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpclient-4.2.5.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpclient-4.3-beta1.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpclient-cache-4.2.5.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpclient-cache-4.3-beta1.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpcore-4.2.4.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpcore-4.3-beta2.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpcore-ab-4.3-beta2.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpcore-nio-4.3-beta2.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/httpmime-4.2.5.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/Jama-1.0.3.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/javacv-android-arm.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/javacv-linux-x86_64.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/javacv-linux-x86.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/javacv-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacpp.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/javacv-windows-x86_64.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/javacv-windows-x86.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/javacv.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/jaxb-core.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/jcommon-1.0.18.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/jfreechart-1.0.15.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/mysql-connector-java-5.1.25-bin.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/simplecaptcha-1.2.1.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/swingx-all-1.6.5.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/thumbnailator-0.4.4.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/jaxb-core.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/xmpcore.jar"/>
 	<classpathentry kind="lib" path="src/viper/util/tika-app-1.4.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/jfreechart-1.0.15.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/javacpp.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/javacv.jar"/>
-	<classpathentry kind="lib" path="src/viper/util/jcommon-1.0.18.jar"/>
+	<classpathentry kind="lib" path="src/viper/util/xmpcore.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

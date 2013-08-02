@@ -9,8 +9,10 @@ import viper.ui.main.StoredPreferences;
 
 public class DBController implements StoredPreferences {
 	private static Connection con;
-	private static String userid = "root", password = "root";
-	private static String url = "jdbc:mysql://localhost:3306/ISFCS-db";
+	//private static String userid = "root", password = "root";
+	private static String userid = "root", password = "MariahFarah";
+	//private static String url = "jdbc:mysql://localhost:3306/ISFCS-db";
+	private static String url = "jdbc:mysql://192.168.180.128:3306/isfcs-db";
 	private static PreparedStatement pstmt;
 
 	public static Connection getConnection() {

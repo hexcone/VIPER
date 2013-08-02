@@ -1,12 +1,15 @@
 package viper.ui.main;
 
 import java.awt.Font;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
+import viper.entity.Logger;
 import viper.entity.TrackedPanel;
 import viper.ui.user.LoginPanel;
 
@@ -47,7 +50,37 @@ public class MainFrame extends JFrame implements StoredPreferences {
 		this.setResizable(false);
 		this.setTitle("VIPER");
 		this.setVisible(false);
-		
+		this.addWindowListener(new WindowListener() {
+			@Override
+			public void windowActivated(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+			}
+			@Override
+			public void windowClosed(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+			}
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+				Logger.logUserLogout();
+			}
+			@Override
+			public void windowDeactivated(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+			}
+			@Override
+			public void windowDeiconified(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+			}
+			@Override
+			public void windowIconified(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+			}
+			@Override
+			public void windowOpened(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+			}
+		});
 	}
 
 	/**

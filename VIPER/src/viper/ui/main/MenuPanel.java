@@ -21,9 +21,13 @@ import java.io.File;
 import java.io.IOException;
 import javax.swing.ImageIcon;
 
+import viper.ui.stegnograph.ImgStegoPanel;
+import viper.ui.stegnograph.ImgStegoRevealPanel;
 import viper.ui.data.DataProfilePanel;
+import viper.ui.file.FileManager;
 import viper.ui.settings.SettingsPanel;
 import viper.ui.user.UserProfilePanel;
+import viper.ui.watermark.ImageWatermarkPanel;
 
 public class MenuPanel extends JPanel implements StoredPreferences {
 
@@ -32,11 +36,11 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 	private static ContentPanel content;
 	private static boolean selected = false;
 	private JLabel jLabelLogo;
+	private JLabel jLabelMenuSteganalysis;
 	private JLabel jLabelMenuSteganograph;
 	private JLabel jLabelMenuWatermark;
 	private JLabel jLabelMenuFileManagement;
 	private JLabel jLabelMenuDataProfile;
-	private JLabel jLabelMenuUserProfile;
 	private JLabel jLabelMenuSettings;
 	/**
 	 * This is the default constructor
@@ -119,6 +123,7 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 	}
 
 	private class ContentPanel extends JPanel {
+		
 		public ContentPanel() {
 			initialize();
 		}
@@ -178,12 +183,46 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 
 				@Override
 				public void mouseClicked(MouseEvent e) {
+					JPanel panel = new ImgStegoPanel(frame);
+					JPanel menu = new MenuPanel(frame);
+					menu.setLocation(700,0);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(menu);
+					frame.getContentPane().add(panel);
+					frame.getContentPane().validate();
+					frame.getContentPane().repaint();
+				}
+			});
+			
+			jLabelMenuSteganalysis = new JLabel();
+			jLabelMenuSteganalysis.setBounds(0, 220, 285, 45);
+			jLabelMenuSteganalysis.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			jLabelMenuSteganalysis.setIcon(new ImageIcon(getClass()
+					.getResource("/viper/image/main/menu_steganalysis.png")));
+			jLabelMenuSteganalysis.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseEntered(MouseEvent arg0) {
+				}
 
+				@Override
+				public void mouseExited(MouseEvent e) {
+				}
+
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					JPanel panel = new ImgStegoRevealPanel(frame);
+					JPanel menu = new MenuPanel(frame);
+					menu.setLocation(700,0);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(menu);
+					frame.getContentPane().add(panel);
+					frame.getContentPane().validate();
+					frame.getContentPane().repaint();
 				}
 			});
 			
 			jLabelMenuWatermark = new JLabel();
-			jLabelMenuWatermark.setBounds(0, 220, 285, 45);
+			jLabelMenuWatermark.setBounds(0, 265, 285, 45);
 			jLabelMenuWatermark.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuWatermark.setIcon(new ImageIcon(getClass().getResource(
 					"/viper/image/main/menu_watermark.png")));
@@ -198,12 +237,19 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 
 				@Override
 				public void mouseClicked(MouseEvent e) {
-
+					JPanel panel = new ImageWatermarkPanel(frame);
+					JPanel menu = new MenuPanel(frame);
+					menu.setLocation(700,0);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(menu);
+					frame.getContentPane().add(panel);
+					frame.getContentPane().validate();
+					frame.getContentPane().repaint();
 				}
 			});
 
 			jLabelMenuFileManagement = new JLabel();
-			jLabelMenuFileManagement.setBounds(0, 265, 285, 45);
+			jLabelMenuFileManagement.setBounds(0, 310, 285, 45);
 			jLabelMenuFileManagement.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuFileManagement.setIcon(new ImageIcon(getClass()
 					.getResource("/viper/image/main/menu_filemanagement.png")));
@@ -218,12 +264,20 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 
 				@Override
 				public void mouseClicked(MouseEvent e) {
+					JPanel panel = new FileManager(frame);
+					JPanel menu = new MenuPanel(frame);
+					menu.setLocation(700,0);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(menu);
+					frame.getContentPane().add(panel);
+					frame.getContentPane().validate();
+					frame.getContentPane().repaint();
 
 				}
 			});
 
 			jLabelMenuDataProfile = new JLabel();
-			jLabelMenuDataProfile.setBounds(0, 310, 285, 45);
+			jLabelMenuDataProfile.setBounds(0, 355, 285, 45);
 			jLabelMenuDataProfile.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			jLabelMenuDataProfile.setIcon(new ImageIcon(getClass().getResource(
 					"/viper/image/main/menu_dataprofile.png")));
@@ -239,33 +293,6 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 				@Override
 				public void mouseClicked(MouseEvent e) {
 					JPanel panel = new DataProfilePanel(frame);
-					JPanel menu = new MenuPanel(frame);
-					menu.setLocation(700,0);
-					frame.getContentPane().removeAll();
-					frame.getContentPane().add(menu);
-					frame.getContentPane().add(panel);
-					frame.getContentPane().validate();
-					frame.getContentPane().repaint();
-				}
-			});
-
-			jLabelMenuUserProfile = new JLabel();
-			jLabelMenuUserProfile.setBounds(0, 355, 285, 45);
-			jLabelMenuUserProfile.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			jLabelMenuUserProfile.setIcon(new ImageIcon(getClass().getResource(
-					"/viper/image/main/menu_userprofile.png")));
-			jLabelMenuUserProfile.addMouseListener(new MouseAdapter() {
-				@Override
-				public void mouseEntered(MouseEvent arg0) {
-				}
-
-				@Override
-				public void mouseExited(MouseEvent e) {
-				}
-
-				@Override
-				public void mouseClicked(MouseEvent e) {
-					JPanel panel = new UserProfilePanel(frame);
 					JPanel menu = new MenuPanel(frame);
 					menu.setLocation(700,0);
 					frame.getContentPane().removeAll();
@@ -308,10 +335,10 @@ public class MenuPanel extends JPanel implements StoredPreferences {
 			this.setBackground(Color.black);
 
 			this.add(jLabelMenuSettings);
-			this.add(jLabelMenuUserProfile);
 			this.add(jLabelMenuDataProfile);
 			this.add(jLabelMenuFileManagement);
 			this.add(jLabelMenuWatermark);
+			this.add(jLabelMenuSteganalysis);
 			this.add(jLabelMenuSteganograph);
 			this.add(jLabelLogo);
 		}

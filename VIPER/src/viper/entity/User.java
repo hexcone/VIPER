@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.UUID;
 
 import viper.db.DBController;
@@ -267,8 +268,8 @@ public class User implements StoredPreferences {
 
 			try {
 				sql = "INSERT INTO user(`userId`, `userName`, `userPassword`, `userImagePath`, `userEmail`, " +
-						"`userRole`, `userSSLSetting`, `userFaceRegSetting`, `userProfileSetting`, `userSuspended`) " +
-						"VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+						"`userRole`, `userSSLSetting`, `userFaceRegSetting`, `userProfileSetting`, `userSuspended`, `userCreated`) " +
+						"VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 				pstmt = con.prepareStatement(sql);
 
@@ -282,6 +283,7 @@ public class User implements StoredPreferences {
 				pstmt.setInt(8, userFaceRegSetting ? 1 : 0);
 				pstmt.setInt(9, userProfileSetting ? 1 : 0);
 				pstmt.setInt(10, userSuspended ? 1 : 0);
+				pstmt.setString(11, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 
 				pstmt.executeUpdate();
 				pstmt.close();

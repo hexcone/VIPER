@@ -162,10 +162,9 @@ public class Logger implements StoredPreferences {
 	// irregardless of if they did so willingly or not.
 	public static void logUserLogout() {
 		entranceID = PREF.get(ENTRANCEID, null);
+		generateCurrentTime();
 		if (entranceID != null) {
-			String sqlCommand = "UPDATE EntranceRecord "
-					+ "SET Time_Of_Exit = ?, Date_Of_Exit "
-					+ "WHERE Entrance_ID = ?";
+			String sqlCommand = "UPDATE EntranceRecord SET Time_Of_Exit = ?, Date_Of_Exit = ? WHERE Entrance_ID = ?";
 
 			try {
 				con = DBController.getConnection();

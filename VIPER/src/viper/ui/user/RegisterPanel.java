@@ -285,6 +285,8 @@ public class RegisterPanel extends TrackedPanel implements StoredPreferences {
 							|| jTextFieldEmail.getText().equals("")
 							|| jPasswordField.getPassword().length == 0
 							|| jPasswordFieldRepeat.getPassword().length == 0) {
+
+						System.out.println("1");
 						if (jTextFieldUsername.getText().equals("")) {
 							jLabelUsernameValidator.setText("Empty field!");
 							jLabelUsernameValidator.setVisible(true);
@@ -300,22 +302,21 @@ public class RegisterPanel extends TrackedPanel implements StoredPreferences {
 						if (jPasswordFieldRepeat.getPassword().length == 0) {
 							jLabelPasswordValidator.setText("Empty field!");
 							jLabelPasswordValidator.setVisible(true);
-						} else {
-
-							try {
-								createUser();
-							} catch (Exception ex) {
-								JOptionPane.showMessageDialog(frame,
-										"Account creation failed.");
-							}
+						} 
+					} else {
+						try {
+							createUser();
+						} catch (Exception ex) {
 							JOptionPane.showMessageDialog(frame,
-									"Account created sucessfully.");
-							JPanel panel = new LoginPanel(frame);
-							frame.getContentPane().removeAll();
-							frame.getContentPane().add(panel);
-							frame.getContentPane().validate();
-							frame.getContentPane().repaint();
+									"Account creation failed.");
 						}
+						JOptionPane.showMessageDialog(frame,
+								"Account created sucessfully.");
+						JPanel panel = new LoginPanel(frame);
+						frame.getContentPane().removeAll();
+						frame.getContentPane().add(panel);
+						frame.getContentPane().validate();
+						frame.getContentPane().repaint();
 					}
 				}
 			}
