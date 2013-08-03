@@ -29,9 +29,9 @@ import net.coobird.thumbnailator.geometry.Positions;
 
 import viper.entity.Logger;
 import viper.entity.TrackedPanel;
-import viper.ui.main.HomePanel;
 import viper.ui.main.MenuPanel;
 import viper.ui.main.StoredPreferences;
+import viper.ui.stegnograph.ImgStegoPanel;
 
 public class FaceRecPanel extends TrackedPanel implements StoredPreferences {
 
@@ -42,6 +42,7 @@ public class FaceRecPanel extends TrackedPanel implements StoredPreferences {
 	private IplImage grabbedImage;
 	Thread th;
 	boolean preview;
+	private static String programDir = PREF.get(PROGRAMDIR, null);
 	/**
 	 * Create the panel.
 	 */
@@ -70,8 +71,8 @@ public class FaceRecPanel extends TrackedPanel implements StoredPreferences {
 		jButtonCapture.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				String newFilePath = "src/viper/image/user/temp.jpg";
-				String newUserFaceRecPath = "/viper/image/user/temp.jpg";
+				String newFilePath = programDir + "temp.jpg";
+				String newUserFaceRecPath = programDir + "temp.jpg";
 				OpenCVFrameGrabber grabber = new OpenCVFrameGrabber(0);
 				try {
 					int region;
@@ -103,22 +104,17 @@ public class FaceRecPanel extends TrackedPanel implements StoredPreferences {
 		        preview = false;
 		        th.interrupt();
 		        
-		        URL urlFile = getClass().getResource(newUserFaceRecPath);
-		        File file = new File(urlFile.getPath()); 
-		        
-		        URL urlParent = getClass().getResource("/viper/image/user/facerec/img2.jpg");
-		        File parent = new File(urlParent.getPath()); 
-
+		        File file = new File(programDir + "temp.jpg"); 
+		        File parent = new File(programDir + "facerec/");
 		        System.out.println("getAbsolutePath: " + file.getAbsolutePath());
-		        System.out.println("getParent: " + parent.getParent());
+		        System.out.println("getParent: " + parent.getAbsolutePath());
 		        
-		        //TestFaceRecognition tfr = new TestFaceRecognition(parent.getParent(), file.getAbsolutePath());
-				
-		        OpenCVFaceRecognizer fr = new OpenCVFaceRecognizer(parent.getParent(), file.getAbsolutePath());
+		        OpenCVFaceRecognizer fr = new OpenCVFaceRecognizer(parent.getAbsolutePath(), file.getAbsolutePath());
 		        if (fr.isMatch()) {
 					try {
 						Logger.logUserLogin(PREF.get(USERID, null), true,
-								"FaceRec::"+getIp());
+								"FaceRec::"+
+						getIp());
 					} catch (java.lang.Exception e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -127,7 +123,7 @@ public class FaceRecPanel extends TrackedPanel implements StoredPreferences {
 							"Match successful!");
 					Logger.logUserLogin(PREF.get(USERID, null), true,
 							"FaceRec");
-		        	JPanel panel = new HomePanel(frame);
+		        	JPanel panel = new ImgStegoPanel(frame);
 					JPanel menu = new MenuPanel(frame);
 					menu.setLocation(700,0);
 					frame.getContentPane().removeAll();

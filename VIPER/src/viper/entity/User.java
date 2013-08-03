@@ -198,7 +198,7 @@ public class User implements StoredPreferences {
 		this.userId = User.generateUUID();
 		this.userName = userName;
 		this.userPassword = userPassword;
-		this.userImagePath = "/viper/image/user/profile/image.jpg";
+		this.userImagePath = null;
 		this.userEmail = userEmail;
 		this.userRole = "1";
 		this.userSSLSetting = false;

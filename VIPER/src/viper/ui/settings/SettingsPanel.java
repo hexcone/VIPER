@@ -70,6 +70,7 @@ public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 	private JPasswordField jPasswordFieldRepeat;
 	
 	private String newUserImagePath;
+	private String oldUserImagePath;
 	private String newUserFaceRecPath;
 	private String oldUserFaceRecPath;
 	
@@ -80,6 +81,8 @@ public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 	private JLabel jLabelCanvas;
 	private IplImage grabbedImage;
 	private JButton jButtonCapture;
+	private static String programDir = PREF.get(PROGRAMDIR, null);
+	
 	/**
 	 * Create the panel.
 	 */
@@ -340,15 +343,9 @@ public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 		            File file = fc.getSelectedFile();
 		            String ext = file.getName().substring(file.getName().lastIndexOf("."));
 		            
-		            String newFilePath = 
-		            		"src/viper/image/user/profile/" + 
-		            		PREF.get(USERNAME, null) 
-		            		+ ext;
+		            String newFilePath = programDir + "profile/" + PREF.get(USERNAME, null) + ext;
 		            
-		            newUserImagePath = 
-		            		"/viper/image/user/profile/" + 
-		            		PREF.get(USERNAME, null) 
-		            		+ ext;
+		            newUserImagePath = programDir + "profile/" + PREF.get(USERNAME, null) + ext;
 		           
 					try {
 						int region;
@@ -386,7 +383,16 @@ public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 		jLabelProfileImage.setHorizontalTextPosition(JLabel.CENTER);
 		jLabelProfileImage.setVerticalTextPosition(JLabel.BOTTOM);
 		jLabelProfileImage.setForeground(Color.white);
-		jLabelProfileImage.setIcon(new ImageIcon(getClass().getResource(user.getUserImagePath())));
+		if (user.getUserImagePath() == null) {
+			jLabelProfileImage.setIcon(new ImageIcon(getClass().getResource("/viper/image/user/null.jpg")));
+		} 
+		else if (user.getUserImagePath().equals("")) {
+			jLabelProfileImage.setIcon(new ImageIcon(getClass().getResource("/viper/image/user/null.jpg")));
+		}
+		else {
+			oldUserImagePath = user.getUserImagePath();
+			jLabelProfileImage.setIcon(new ImageIcon(user.getUserImagePath()));
+		}
 		// System.out.println("user.getUserImagePath() :" + user.getUserImagePath());
 		
 		jLabelFaceRecImage = new JLabel();
@@ -407,15 +413,10 @@ public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 						OpenCVFrameGrabber grabber = new OpenCVFrameGrabber(0);
 						try {
 								int region;
-								
-								String newFilePath = 
-					            		"src/viper/image/user/facerec/" + 
-					            		PREF.get(USERNAME, null) 
-					            		+ ".jpg";
+
+					            String newFilePath = programDir + "facerec/" + PREF.get(USERNAME, null) + ".jpg";
 								System.out.println("newFilePath: " + newFilePath);
-								
-								newUserFaceRecPath = "/viper/image/user/facerec/"
-										+ PREF.get(USERNAME, null) + ".jpg";
+								newUserFaceRecPath = programDir + "facerec/" + PREF.get(USERNAME, null) + ".jpg";
 								
 
 					            grabber.start();
@@ -487,7 +488,7 @@ public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 		}
 		else {
 			oldUserFaceRecPath = user.getUserFaceRecPath();
-			jLabelFaceRecImage.setIcon(new ImageIcon(getClass().getResource(user.getUserFaceRecPath())));
+			jLabelFaceRecImage.setIcon(new ImageIcon(user.getUserFaceRecPath()));
 		}
 		
 		jButtonSave = new JButton("Save Settings");
@@ -521,28 +522,20 @@ public class SettingsPanel extends TrackedPanel implements StoredPreferences {
 					if (newUserImagePath != null) {
 						user.setUserImagePath(newUserImagePath);
 					}
-					else {
-						user.setUserImagePath("/viper/image/user/profile/image.jpg");
+					else if (oldUserImagePath != null) {
+						user.setUserImagePath(oldUserImagePath);
 					}
-					if (oldUserFaceRecPath != null) {
-						user.setUserFaceRecPath(oldUserFaceRecPath);
-					}
-					else if (newUserFaceRecPath != null) {
+					if (newUserFaceRecPath != null) {
 						user.setUserFaceRecPath(newUserFaceRecPath);
+					}
+					else if (oldUserFaceRecPath != null) {
+						user.setUserFaceRecPath(oldUserFaceRecPath);
 					}
 					user.updateUser();
 					
 					JOptionPane.showMessageDialog(frame,
 							"Updated successfully!");
 					
-					JPanel panel = new SettingsPanel(frame);
-					JPanel menu = new MenuPanel(frame);
-					menu.setLocation(700, 0);
-					frame.getContentPane().removeAll();
-					frame.getContentPane().add(menu);
-					frame.getContentPane().add(panel);
-					frame.getContentPane().validate();
-					frame.getContentPane().repaint();
 				}
 			}
 		});

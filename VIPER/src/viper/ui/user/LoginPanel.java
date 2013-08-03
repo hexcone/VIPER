@@ -29,9 +29,9 @@ import org.jdesktop.swingx.prompt.PromptSupport;
 import viper.entity.Logger;
 import viper.entity.TrackedPanel;
 import viper.entity.User;
-import viper.ui.main.HomePanel;
 import viper.ui.main.MenuPanel;
 import viper.ui.main.StoredPreferences;
+import viper.ui.stegnograph.ImgStegoPanel;
 
 import javax.swing.JButton;
 import javax.swing.event.DocumentEvent;
@@ -100,7 +100,7 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 		ImageIcon icon = new ImageIcon(bi);
 		
 		jLabelCaptchaImage = new JLabel(icon);
-		jLabelCaptchaImage.setBounds(450, 370, 255, 70);
+		jLabelCaptchaImage.setBounds(450, 270, 255, 70);
 		
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
@@ -108,12 +108,12 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 				"/viper/image/main/background.png")));
 
 		jLabelLogo = new JLabel();
-		jLabelLogo.setBounds(190, 220, 250, 194);
+		jLabelLogo.setBounds(190, 200, 250, 194);
 		jLabelLogo.setIcon(new ImageIcon(getClass().getResource(
 				"/viper/image/main/logo-250.png")));
 
 		jTextFieldUsername = new JTextField();
-		jTextFieldUsername.setBounds(450, 250, 350, 40);
+		jTextFieldUsername.setBounds(450, 150, 350, 40);
 		jTextFieldUsername.setBackground(Color.white);
 		PromptSupport.setPrompt("Username", jTextFieldUsername);
 		jTextFieldUsername.addKeyListener(new KeyListener() {
@@ -132,12 +132,12 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 
 			}
 		});
+		
 
 		jPasswordField = new JPasswordField();
-		jPasswordField.setBounds(450, 310, 350, 40);
+		jPasswordField.setBounds(450, 210, 350, 40);
 		PromptSupport.setPrompt("Password", jPasswordField);
-		
-		jTextFieldUsername.addKeyListener(new KeyListener() {
+		jPasswordField.addKeyListener(new KeyListener() {
 			public void keyPressed(KeyEvent keyEvent) {
 				System.out.println("Pressed: " + keyEvent);
 				passwordArray.add(new Date());
@@ -153,10 +153,11 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 
 			}
 		});
+		
 
 
 		jButtonLogin = new JButton("Login");
-		jButtonLogin.setBounds(700, 510, 100, 30);
+		jButtonLogin.setBounds(700, 410, 100, 30);
 		jButtonLogin.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		jButtonLogin.addMouseListener(new MouseAdapter() {
 			@Override
@@ -169,8 +170,8 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 					JOptionPane.showMessageDialog(frame,
 							"Please fill in all fields");
 				} else {
-					if (true){
-					//if (captcha.getAnswer().equals(jTextFieldCaptchaAnswerField.getText())){
+					//if (true){
+					if (captcha.getAnswer().equals(jTextFieldCaptchaAnswerField.getText())){
 						user = User.authenticateUser(jTextFieldUsername.getText(),
 								User.hashPassword(jPasswordField.getPassword()));
 						/*user = User.authenticateUser("Admin", "1a1dc91c907325c69271ddf0c944bc72");*/
@@ -207,7 +208,7 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 									// TODO Auto-generated catch block
 									e1.printStackTrace();
 								}
-								JPanel panel = new HomePanel(frame);
+								JPanel panel = new ImgStegoPanel(frame);
 								JPanel menu = new MenuPanel(frame);
 								menu.setLocation(700,0);
 								frame.getContentPane().removeAll();
@@ -231,7 +232,7 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 		jLabelRegister.setText("Register");
 		jLabelRegister.setFont(new Font("Trebuchet MS", Font.ITALIC, 14));
 		jLabelRegister.setForeground(Color.gray);
-		jLabelRegister.setBounds(450, 510, 60, 30);
+		jLabelRegister.setBounds(450, 410, 60, 30);
 		jLabelRegister
 				.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		jLabelRegister.addMouseListener(new MouseAdapter() {
@@ -259,7 +260,7 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 		jLabelForgetPassword.setText("Forget Password");
 		jLabelForgetPassword.setFont(new Font("Trebuchet MS", Font.ITALIC, 14));
 		jLabelForgetPassword.setForeground(Color.gray);
-		jLabelForgetPassword.setBounds(520, 510, 130, 30);
+		jLabelForgetPassword.setBounds(520, 410, 130, 30);
 		jLabelForgetPassword.setCursor(Cursor
 				.getPredefinedCursor(Cursor.HAND_CURSOR));
 		jLabelForgetPassword.addMouseListener(new MouseAdapter() {
@@ -302,11 +303,7 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 	private JTextField getJTextFieldCaptchaAnswerField() {
 		if (jTextFieldCaptchaAnswerField == null) {
 			jTextFieldCaptchaAnswerField = new JTextField();
-			//jTextFieldUsername.setBounds(450, 250, 350, 40);
-			//jPasswordField.setBounds(450, 310, 350, 40);
-			//jLabelCaptchaImage.setBounds(450, 370, 255, 70);
-			//jButtonRefresh.setBounds(710, 370, 90, 30);
-			jTextFieldCaptchaAnswerField.setBounds(450, 460, 350, 40);
+			jTextFieldCaptchaAnswerField.setBounds(450, 360, 350, 40);
 			PromptSupport.setPrompt("Enter CAPTCHA challenge", jTextFieldCaptchaAnswerField);
 		}
 		return jTextFieldCaptchaAnswerField;
@@ -315,7 +312,7 @@ public class LoginPanel extends TrackedPanel implements StoredPreferences {
 	private JButton getJButtonRefresh() {
 		if (jButtonRefresh == null) {
 			jButtonRefresh = new JButton();
-			jButtonRefresh.setBounds(710, 370, 90, 30);
+			jButtonRefresh.setBounds(710, 270, 90, 30);
 			jButtonRefresh.setText("Refresh");
 			jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {

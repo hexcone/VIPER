@@ -3,8 +3,11 @@ package viper.ui.data;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -23,7 +26,12 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JTextField;
+import javax.swing.ProgressMonitor;
+import javax.swing.SwingWorker;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -41,6 +49,7 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.chart.title.TextTitle;
+import org.jfree.data.gantt.Task;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.util.Rotation;
 import org.xml.sax.SAXException;
@@ -49,6 +58,7 @@ import viper.entity.Entry;
 import viper.entity.TrackedPanel;
 import viper.entity.User;
 import viper.entity.XmlFile;
+import viper.ui.main.MenuPanel;
 import viper.ui.main.StoredPreferences;
 
 public class DataProfilePanel extends TrackedPanel implements StoredPreferences {
@@ -58,7 +68,6 @@ public class DataProfilePanel extends TrackedPanel implements StoredPreferences 
 	private static JTextField jTextFieldPath;
 	private JButton jButtonGenerate;
 	private ChartPanel chartPanel;
-	private static ArrayList<String> extArray = new ArrayList<String>();
 	private static ArrayList<Entry> entryArray = new ArrayList<Entry>();
 	private User user = User.retrieveUser(PREF.get(USERID, null));
 	private static XmlFile xmlfile;
@@ -66,7 +75,9 @@ public class DataProfilePanel extends TrackedPanel implements StoredPreferences 
 	private static String catArray[] = {"main", "image", "audio", "video"};
 	private int loopCount;
 	private JLabel jLabelAllFiles;
-	
+	protected Task task;
+	private JProgressBar progressBar;
+	private static String xmlDir = PREF.get(PROGRAMDIR, null);
 	/**
 	 * Create the panel.
 	 */
@@ -85,6 +96,10 @@ public class DataProfilePanel extends TrackedPanel implements StoredPreferences 
 	public void initialize() {
 		super.initialize();
 		
+		progressBar = new JProgressBar(0, 100);
+        progressBar.setValue(0);
+        progressBar.setStringPainted(true); 
+        
 		jLabelBackground = new JLabel();
 		jLabelBackground.setBounds(0, 0, 1920, 1200);
 		jLabelBackground.setIcon(new ImageIcon(getClass().getResource(
@@ -117,13 +132,25 @@ public class DataProfilePanel extends TrackedPanel implements StoredPreferences 
 		jButtonGenerate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				walkTree(new File(jTextFieldPath.getText()));
-				User.updateUser("./"+ PREF.get(USERNAME, null) +"-viperprofile.xml");
+				progressBar.setIndeterminate(true);
+				task = new Task();
+			    task.execute();
 			}
 		});
+		jButtonGenerate.addPropertyChangeListener(new PropertyChangeListener() {
+			@Override
+			public void propertyChange(PropertyChangeEvent evt) {
+				if ("progress" == evt.getPropertyName()) {
+		            int progress = (Integer) evt.getNewValue();
+		            progressBar.setIndeterminate(false);
+		            progressBar.setValue(progress);
+		        }
+			}
+		});
+		
 		if (user.getUserMetadataPath() != null) {
 			try {
-				File file = new File("./"+ PREF.get(USERNAME, null) +"-viperprofile.xml");
+				File file = new File(user.getUserMetadataPath());
 				JAXBContext jaxbContext = JAXBContext.newInstance(XmlFile.class);
 				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 				xmlfile = (XmlFile) jaxbUnmarshaller.unmarshal(file);
@@ -404,7 +431,7 @@ public class DataProfilePanel extends TrackedPanel implements StoredPreferences 
 			xmlfile.setRootDir(jTextFieldPath.getText());
 			xmlfile.setDateProfiled(new Date());
 			xmlfile.setEntry(entryArray);
-			File xmlFilePath = new File("./"+ PREF.get(USERNAME, null) +"-viperprofile.xml");
+			File xmlFilePath = new File(xmlDir + PREF.get(USERNAME, null) +"-viperprofile.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(XmlFile.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
@@ -887,4 +914,42 @@ public class DataProfilePanel extends TrackedPanel implements StoredPreferences 
         
         return chart;
 	}
+	
+	class Task extends SwingWorker<Void, Void> {
+        /*
+         * Main task. Executed in background thread.
+         */
+        @Override
+        public Void doInBackground() {
+        	File xmlFilePath = new File(xmlDir + PREF.get(USERNAME, null) +"-viperprofile.xml");
+        	
+			if (xmlFilePath.exists()){
+				xmlFilePath.delete();
+			}
+			entryArray = new ArrayList<Entry>();
+			
+        	walkTree(new File(jTextFieldPath.getText()));
+			User.updateUser(xmlDir + PREF.get(USERNAME, null) +"-viperprofile.xml");
+            
+            return null;
+        }
+
+        /*
+         * Executed in event dispatching thread
+         */
+        @Override
+        public void done() {
+            Toolkit.getDefaultToolkit().beep();
+        	JOptionPane.showMessageDialog(frame,
+					"Completed!");
+        	JPanel panel = new DataProfilePanel(frame);
+			JPanel menu = new MenuPanel(frame);
+			menu.setLocation(700,0);
+			frame.getContentPane().removeAll();
+			frame.getContentPane().add(menu);
+			frame.getContentPane().add(panel);
+			frame.getContentPane().validate();
+			frame.getContentPane().repaint();
+        }
+    }
 }

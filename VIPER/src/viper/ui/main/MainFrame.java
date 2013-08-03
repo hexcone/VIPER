@@ -3,6 +3,7 @@ package viper.ui.main;
 import java.awt.Font;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.File;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -42,6 +43,20 @@ public class MainFrame extends JFrame implements StoredPreferences {
 			}
 		} catch (Exception e) {
 
+		}
+		
+		PREF.put(PROGRAMDIR, "C:/ProgramData/VIPERMEDIA/");
+		String dir = PREF.get(PROGRAMDIR, null);
+		File theDir = new File(dir);
+
+		// if the directory does not exist, create it
+		if (!theDir.exists()) {
+			System.out.println("creating directory: " + dir);
+			boolean result = theDir.mkdir();
+
+			if (result) {
+				System.out.println("DIR created");
+			}
 		}
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
