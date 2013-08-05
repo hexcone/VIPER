@@ -197,9 +197,9 @@ public class ImgStegoRevealPanel extends TrackedPanel implements StoredPreferenc
 	private JButton getJButtonOK() {
 		if (jButtonOK == null) {
 			jButtonOK = new JButton();
-			jButtonOK.setLocation(new Point(847, 594));
-			jButtonOK.setText("OK");
-			jButtonOK.setSize(new Dimension(100, 29));
+			jButtonOK.setLocation(new Point(700, 594));
+			jButtonOK.setText("Extract hidden message");
+			jButtonOK.setSize(new Dimension(200, 29));
 			jButtonOK.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
 					

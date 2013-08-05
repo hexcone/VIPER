@@ -212,50 +212,51 @@ public class FileManager extends TrackedPanel
 					boolean success = false;
 					
 						fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-						returnVal = fileChooser.showOpenDialog(FileManager.this);
-					
-					if(returnVal == JFileChooser.APPROVE_OPTION)
-					{
-							File file = fileChooser.getSelectedFile();
-						
-							if(fmc.checkFiles(file.getName()))
-							{
-								String [] options = new String[]{"Override the duplicate file", "Cancel Operations"};
-							
-								returnVal = JOptionPane.showOptionDialog(mainFrame,
-										"An existing copy of " + fileName + " exists in the database.\n\nPlease choose to...\nOverride the stored copy.\n\nCancel operations",
-										"Duplicate File",
-										JOptionPane.YES_NO_OPTION,
-										JOptionPane.QUESTION_MESSAGE,
-										null,
-										options,
-										options[1]);
+					returnVal = fileChooser.showOpenDialog(FileManager.this);
+
+					if (returnVal == JFileChooser.APPROVE_OPTION) {
+						File file = fileChooser.getSelectedFile();
+
+						if (fmc.checkFiles(file.getName())) {
+							String[] options = new String[] {
+									"Override the duplicate file",
+									"Cancel Operations" };
+
+							returnVal = JOptionPane
+									.showOptionDialog(
+											mainFrame,
+											"An existing copy of "
+													+ fileName
+													+ " exists in the database.\n\nPlease choose to...\nOverride the stored copy.\n\nCancel operations",
+											"Duplicate File",
+											JOptionPane.YES_NO_OPTION,
+											JOptionPane.QUESTION_MESSAGE, null,
+											options, options[1]);
+						}
+
+						if (returnVal != JOptionPane.NO_OPTION) {
+							success = fmc.uploadFiles(file);
+
+							if (success) {
+								JOptionPane.showMessageDialog(
+										mainFrame,
+										"Successfully uploaded file "
+												+ file.getName(), "Success",
+										JOptionPane.INFORMATION_MESSAGE);
 							}
-							
-								if(returnVal != JOptionPane.NO_OPTION)
-								{
-									success = fmc.uploadFiles(file);
-							
-									if(success)
-									{
-										JOptionPane.showMessageDialog(mainFrame,
-												"Successfully uploaded file " + file.getName(),
-												"Success",
-												JOptionPane.INFORMATION_MESSAGE);
-									}
-						
-									else
-									{
-										JOptionPane.showMessageDialog(mainFrame,
-												"Failed to uploaded file " + file.getName(),
-												"Failure",
-												JOptionPane.ERROR_MESSAGE);
-									}
-								
-									refreshFilesInStorageView();
-								}
-						
-					}		
+
+							else {
+								JOptionPane.showMessageDialog(
+										mainFrame,
+										"Failed to uploaded file "
+												+ file.getName(), "Failure",
+										JOptionPane.ERROR_MESSAGE);
+							}
+
+							refreshFilesInStorageView();
+						}
+
+					}
 				}
 			});
 		}

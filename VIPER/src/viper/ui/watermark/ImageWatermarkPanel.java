@@ -250,8 +250,6 @@ public class ImageWatermarkPanel extends TrackedPanel implements StoredPreferenc
 					jTextFieldWatermarkTxt.setEnabled(true);
 					jButtonWatermark.setVisible(true);
 					jButtonWatermark.setEnabled(true);
-					jButtonCompare.setVisible(true);
-					jButtonCompare.setEnabled(true);
 					}
 				}
 			});
